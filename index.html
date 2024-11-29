@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>E-commerce product page</title>
+  </head>
+  <body class="relative  overflow-x-hidden ">
+    <div class="div-1 backdrop-blur-md  md:px-24 pb-24 font-kumbh">
+      <!-- Navber -->
+      <div class="flex justify-between items-center pt-3 md:pt-7 px-4">
+        <div class="flex space-x-14 items-center relative">
+          <img src="images/logo.svg" alt="" class="md:pl-0 pl-12 pb-3 md:pb-7"/>
+          <img src="images/icon-menu.svg" alt="" class="menu-btn md:hidden block absolute top-1 -left-10"/>
+          <!-- Destop Menu  -->
+          <div class="md:flex space-x-6 hidden text-lg text-darkGrayishBlue">
+            <div class="group">
+              <a href="#">Collections</a>
+              <div
+                class="pt-7 border-white border-b-2 group-hover:border-orange"
+              ></div>
+            </div>
+            <div class="group">
+              <a href="#">Men</a>
+              <div
+                class="pt-7 group-hover:border-b-2 group-hover:border-orange"
+              ></div>
+            </div>
+            <div class="group">
+              <a href="#">Women</a>
+              <div
+                class="pt-7 group-hover:border-b-2 group-hover:border-orange"
+              ></div>
+            </div>
+            <div class="group">
+              <a href="#">About</a>
+              <div
+                class="pt-7 group-hover:border-b-2 group-hover:border-orange"
+              ></div>
+            </div>
+            <div class="group">
+              <a href="#">Contact</a>
+              <div
+                class="pt-7 group-hover:border-b-2 group-hover:border-orange"
+              ></div>
+            </div>  
+          </div>
+        </div>
+        <div class="flex space-x-5 md:space-x-8 items-center pb-3 md:pb-4 relative">
+          <div class="hidden items absolute top-0 left-10 rounded-lg w-5 h-4 bg-orange text-xs text-white text-center">0</div>
+          <img src="images/icon-cart.svg" alt="" class="cartBtn w-6 h-6" />
+          <img src="images/image-avatar.png" alt=""  class="cursor-pointer w-10 hover:border-2 hover:border-red-300 hover:rounded-full" />
+        </div>
+      </div>
+      <hr class="md:block hidden">
+
+      <!-- Add to cart -->
+       <div class="addToCart absolute shadow-2xl bg-white w-80 rounded-lg top-20 right-5 z-20 md:right-20 md:top-[90px] hidden">
+        <p class="p-5 font-bold text-lg text-veryDarkBlue">Cart</p>
+        <hr>
+        <!-- Empty Cart -->
+        <div class="emptyCart flex items-center justify-center h-40 ">
+          <p class="text-sm text-darkGrayishBlue font-semibold">
+            Your cart is empty.
+          </p>
+        </div>
+        <!-- Cart Display -->
+        <div class="cartDisplay flex flex-col space-y-5 p-5 hidden">
+          <div class="flex justify-between">
+            <img src="images/image-product-1-thumbnail.jpg" alt="" class="w-12 rounded-sm">
+            <div class="flex flex-col space-y-2">
+              <p class="text-sm text-darkGrayishBlue">Fall Limited Edition Sneakers</p>
+              <div class="flex space-x-2">
+                <p class="price text-sm text-darkGrayishBlue">$125.00</p>
+                <p class="text-sm text-darkGrayishBlue">x</p>
+                <p class="itemsSelected text-sm text-darkGrayishBlue">0</p>
+                <p class="font-bold text-sm text-veryDarkBlue">$<span class="totalPrice">0</span></p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center">
+              <img src="images/icon-delete.svg" alt="" class="delete">
+            </div>
+          </div>
+          <button class="flex items-center justify-center rounded-lg bg-orange
+          font-bold text-lg text-veryDarkBlue py-2">Checkout</button>
+        </div>
+       </div>
+
+      <!-- Container -->
+      <div class="flex flex-col md:flex-row pl-0 md:pl-5 md:pt-16 overflow-hidden">
+        <div class="flex flex-col w-full md:w-1/3 md:overflow-hidden">
+          
+          <div class="slider max-w-sm relative ">
+            <img src="images/image-product-1.jpg" alt="Photo 1" class="slide w-full absolute md:rounded-xl" />
+            <img src="images/image-product-2.jpg" alt="Photo 2" class="slide w-full absolute md:rounded-xl" />
+            <img src="images/image-product-3.jpg" alt="Photo 3" class="slide w-full absolute md:rounded-xl" />
+            <img src="images/image-product-4.jpg" alt="Photo 4" class="slide w-full absolute md:rounded-xl" />
+          </div> 
+          
+          <img src="images/icon-next.svg" alt="" class="btnRight absolute right-3 top-56 md:hidden block px-4 py-3 rounded-full bg-white">
+          <img src="images/icon-previous.svg" alt="" class="btnLeft absolute left-3 top-56 md:hidden block px-4 py-3 rounded-full bg-white">
+          
+          <div class="thumbnail-img mt-96 md:flex space-x-5 pt-6 w-full hidden">
+            <button class="hover:opacity-50 focus:opacity-15 focus:border-2 rounded-lg focus:border-red-600">
+              <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt=""
+              class="thumbnail-btn rounded-lg " data-slide="0"
+              />
+            </button>
+            <button class="hover:opacity-50 focus:opacity-15 focus:border-2 rounded-lg focus:border-red-600">
+              <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt=""
+              class="thumbnail-btn rounded-lg" data-slide="1"
+              />
+            </button>
+            <button class="hover:opacity-50 focus:opacity-15 focus:border-2 rounded-lg focus:border-red-600">
+              <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt=""
+              class="thumbnail-btn rounded-lg" data-slide="2"
+              />
+            </button>
+            <button class="hover:opacity-50 focus:opacity-15 focus:border-2 rounded-lg focus:border-red-600">
+              <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt=""
+              class="thumbnail-btn rounded-lg" data-slide="3"
+              />
+            </button>
+          </div>
+        </div>
+        <div class="mt-[400px]  md:ml-36 md:mt-16 max-w-lg md:w-1/2 px-6 md:px-0">
+          <p class="text-sm md:text-lg text-darkGrayishBlue uppercase font-medium">
+            Sneaker Company
+          </p>
+          <h1 class="font-bold text-3xl md:text-5xl text-veryDarkBlue mt-5">
+            Fall Limited Edition Sneakers
+          </h1>
+          <p class="text-sm md:text-lg text-darkGrayishBlue font-medium mt-5 md:mt-10">
+            These low-pro file sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="flex justify-between items-center md:flex-col md:items-start">
+            <div class="flex space-x-5 mt-5 mb-2">
+                <div><h1 class="font-bold text-2xl text-veryDarkBlue ">$125.00</h1></div>
+                <div class="py-1 px-2 text-white bg-veryDarkBlue rounded-lg font-bold">50%</div>
+              </div>
+              <s class="font-bold text-lg text-darkGrayishBlue">$250.00</s>
+          </div>
+          
+          <div class="flex flex-col space-y-5 space-x-0 mt-5 md:flex-row md:space-x-5 md:space-y-0">
+            <div class="flex bg-lightGrayishBlue justify-around items-center w-full md:w-1/3 rounded-lg h-[44px]">
+                <img src="images/icon-minus.svg" alt="" class="minusIcon w-4">
+                <p class="number text-lg text-veryDarkBlue font-bold">0</p>
+                <img src="images/icon-plus.svg" alt="" class="plusIcon w-4">
+            </div>
+            <button class="addToCartBtn flex items-center justify-center space-x-5 rounded-lg text-veryDarkBlue
+             bg-orange w-full md:w-2/3 py-2 ">
+                <img src="images/icon-cart.svg" alt="" class="w-6 h-6" />
+                <h1 class="font-bold text-lg text-veryDarkBlue">Add to cart</h1>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu  -->
+     <div class="hidden menu absolute top-0 bottom-0 font-bold flex flex-col 
+      w-2/3 h-auto py-1 pt-6 pl-6 space-y-3 
+      text-lg text-veryDarkBlue  bg-white">
+        <div class="close-btn pb-10"><img src="images/icon-close.svg" alt=""></div>
+        <a href="#" class="hover:text-pink-500">Collections</a>
+        <a href="#" class="hover:text-pink-500">Men</a>
+        <a href="#" class="hover:text-pink-500">Women</a>
+        <a href="#" class="hover:text-pink-500">About</a>
+        <a href="#" class="hover:text-pink-500">Contact</a>
+     </div>
+    </div>
+  <div class="md:block hidden">
+   <div class="bg-veryDarkBlue bg-opacity-35 hidden box absolute top-0 left-0 h-full w-screen">
+    <div class=" flex  flex-col w-1/3 absolute top-24 left-[450px]  overflow-hidden ">
+      <button class="closeButton flex justify-end py-4 "><img src="images/icon-close.svg" alt="" class="w-5 h-5 close-hover"></button>  
+      <div class="lider w-full relative">
+        <img src="images/image-product-1.jpg" alt="Photo 1" class="lide w-full absolute md:rounded-xl" />
+        <img src="images/image-product-2.jpg" alt="Photo 2" class="lide w-full absolute md:rounded-xl" />
+        <img src="images/image-product-3.jpg" alt="Photo 3" class="lide w-full absolute md:rounded-xl" />
+        <img src="images/image-product-4.jpg" alt="Photo 4" class="lide w-full absolute md:rounded-xl" />
+      </div> 
+      
+      <img src="images/icon-next.svg" alt="" class="rightBtn absolute right-6 top-56 px-4 py-3 rounded-full bg-lightGrayishBlue">
+      <img src="images/icon-previous.svg" alt="" class="leftBtn absolute left-6 top-56 px-4 py-3 rounded-full bg-lightGrayishBlue">
+      
+      <div class="thumbnail-img-2 mt-[450px] md:flex space-x-5 pt-6 pl-8 max-w-[420px] hidden">
+          <button class="hover:opacity-50 focus:opacity-15 focus:border-2 rounded-lg focus:border-red-800">
+            <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt=""
+            class="thumbnail-button rounded-lg " data-slide="0"
+            />
+          </button>
+          <button class="hover:opacity-50 focus:opacity-15 focus:border-2 rounded-lg focus:border-red-600">
+            <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt=""
+            class="thumbnail-button rounded-lg" data-slide="1"
+            />
+          </button>
+          <button class="hover:opacity-50 focus:opacity-15 focus:border-2 rounded-lg focus:border-red-600">
+            <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt=""
+            class="thumbnail-button rounded-lg" data-slide="2"
+            />
+          </button>
+          <button class="hover:opacity-50 focus:opacity-15 focus:border-2 rounded-lg focus:border-red-600">
+            <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt=""
+            class="thumbnail-button rounded-lg" data-slide="3"
+            />
+          </button>
+      </div>
+    </div>
+  </div>
+  </div>
+     <script src="script.js"></script>
+  </body>
+</html>

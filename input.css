@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .background{
+    @apply bg-black bg-opacity-20 
+} */
+.action{
+    @apply border-orange
+}
